@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green: var(--green);
+  --color-cyan: var(--cyan);
+  --color-red: var(--red);
+  --color-black: var(--black);
+  
+  --font-share: "Share Tech Mono", monospace;
+  --font-press: "Press Start 2P", monospace;
+  --font-vt: "VT323", monospace;
+}
+
+:root {
+  --green: #00FF41;
+  --cyan: #00FFFF;
+  --red: #FF003C;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--green);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+@keyframes glitch-burst {
+  0% {
+    transform: translate(0);
+    filter: invert(0) contrast(1);
+    opacity: 1;
+  }
+  10% {
+    transform: translate(-5px, 5px) skewX(20deg);
+    filter: invert(1) hue-rotate(90deg) contrast(2);
+    opacity: 0.9;
+  }
+  20% {
+    transform: translate(10px, -5px) skewX(-20deg);
+    filter: invert(0.5) hue-rotate(180deg) contrast(3);
+    opacity: 0.8;
+  }
+  30% {
+    transform: translate(-10px, 10px) skewX(10deg);
+    filter: invert(1) hue-rotate(270deg) contrast(1.5);
+    opacity: 0.9;
+  }
+  40% {
+    transform: translate(5px, -10px) skewX(-10deg);
+    filter: invert(0) hue-rotate(0) contrast(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translate(-2px, 2px);
+    filter: brightness(2) contrast(2);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(0.9) translate(2px, -2px);
+    filter: brightness(0.5) contrast(0.5);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(1.05) translate(-1px, 1px) skewX(5deg);
+    filter: brightness(1.5) contrast(1.5) hue-rotate(45deg);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(0.95) translate(1px, -1px) skewX(-5deg);
+    filter: brightness(0.8) contrast(0.8) hue-rotate(-45deg);
+    opacity: 0.4;
+  }
+  90% {
+    transform: scale(1.02) translate(0) skewX(2deg);
+    filter: brightness(1.2) contrast(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1) translate(0) skewX(0);
+    filter: invert(0) contrast(1);
+    opacity: 0;
+  }
+}
+
+.animate-glitch-burst {
+  animation: glitch-burst 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
