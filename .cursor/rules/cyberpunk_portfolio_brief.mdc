@@ -1,0 +1,96 @@
+---
+alwaysApply: true
+---
+## 2. Hero / Landing Section
+
+Full viewport landing with name displayed in large ASCII art block letters.
+
+- Name rendered in large ASCII block art — centered or slightly left-offset for asymmetry
+- Subtitle beneath in smaller monospace with a typewriter animation: `> FULL STACK DEVELOPER. AI ENGINEER. HACKATHON CHAMPION.`
+- Blinking cursor `█` at the end of the typing animation
+- Navigation icons below the ASCII name in a curved/arced dock layout — icon-only, label appears on hover
+- Nav sections: `ABOUT`, `EXPERIENCE`, `PROJECTS`, `RESUME`, `SOCIALS`
+
+**Transitions:** Nav icons appear with staggered fade-in + upward slide after text loads. Hovering an icon triggers a brief glitch/flicker before the label appears.
+
+---
+
+## 3. Police Department ID Card
+
+A retro cyberpunk ID card widget — lives in the About section or floats as a sidebar element.
+
+- Header: custom city Metropolitan Digital Crimes Unit department name
+- Profile photo with dystopian duotone filter applied
+- Data fields: `NAME:` / `ID:` / `CLEARANCE LEVEL:` / `STATUS: ACTIVE` / `SPECIALIZATION:`
+- Barcode strip along the bottom
+- Holographic foil shimmer effect on the badge corner
+- Worn/aged aesthetic: subtle grain texture, slightly skewed corners, faded ink effect
+- Sharp corners only — no border radius anywhere
+
+**Hover effects:** Card tilts in 3D (CSS perspective + rotateX/Y), holographic shimmer sweeps across the surface, a red `VERIFIED` stamp blinks into view
+
+---
+
+## 4. Profile Image — Dystopian Filter
+
+Profile photo processed to match the cyberpunk aesthetic.
+
+- Heavy green or cyan duotone color overlay
+- CRT scanlines layered over the image
+- Chromatic aberration — RGB channel offset (red shifted left, blue shifted right)
+- Noise/grain texture at 20–30% opacity
+- Glitch slice effect: horizontal strips of the image offset randomly
+
+*In Figma: use a duotone plugin + noise texture overlay + blend modes*
+
+---
+
+## 5. Section Design
+
+Each section scrolls into view like a new terminal window opening.
+
+- Section headers styled as terminal prompts: `> [ABOUT_ME].exe` or `> LOADING EXPERIENCE...`
+- Content appears with a typewriter reveal or line-by-line fade-in on scroll
+- Thin green border lines (`1px solid #00FF41`) used as section dividers — sharp corners only
+- Scrollbar styled to match: thin, green, minimal
+- No rounded corners anywhere in the UI
+
+### Sections
+
+- **ABOUT** — Bio + ID card component
+- **EXPERIENCE** — Timeline styled as a terminal log/changelog
+- **PROJECTS** — Cards with glitch-on-hover effect and project details
+- **RESUME** — Downloadable, styled as a terminal readout
+- **SOCIALS** — Icon links with scanline hover effect
+
+---
+
+## 6. Transitions & Effects
+
+| Effect | Where |
+|---|---|
+| CRT power-on (content scales from center) | Boot → Hero transition |
+| Chromatic aberration glitch burst | Boot end, section-to-section nav |
+| Typewriter text animation | Hero tagline, section headers |
+| Staggered fade-in + slide-up | Nav icons, ID card fields |
+| 3D card tilt on hover | ID card |
+| Holographic shimmer sweep | ID card hover |
+| Scanline flicker overlay | Entire site (subtle, ~5% opacity) |
+| Glitch slice on hover | Profile image, project cards |
+| Terminal cursor blink `█` | Any active/focused text element |
+| Scroll-triggered line-by-line reveal | About, Experience sections |
+| Green ASCII progress bar fill | Skills section or loading indicators |
+| Red `VERIFIED` stamp blink | ID card hover state |
+
+---
+
+## Component Library (Request in Figma)
+
+- Terminal window frame
+- Police ID card
+- Curved nav icon dock
+- Section header style (`> COMMAND.exe` format)
+- Button style (bordered, no fill, green text)
+- Project card with glitch hover state
+- ASCII progress bar
+- Scanline texture overlay

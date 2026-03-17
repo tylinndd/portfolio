@@ -39,10 +39,10 @@ const HeroSection = () => {
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
       <div className="text-center w-full flex flex-col items-center z-10">
         {/* Name ASCII Art */}
-        <pre className="font-press text-green mb-8 hidden md:block text-[6px] md:text-[8px] lg:text-[10px] xl:text-xs leading-none">
+        <pre className="font-press text-green mb-8 hidden md:block text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px] leading-none">
           {ASCII_ART}
         </pre>
-        <h1 className="font-press text-green mb-8 md:hidden text-2xl lg:text-4xl text-center leading-tight tracking-tighter">
+        <h1 className="font-press text-green mb-8 md:hidden text-3xl lg:text-5xl text-center leading-tight tracking-tighter">
           TYLIN DELANEY
         </h1>
         
