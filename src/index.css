@@ -99,6 +99,32 @@ body {
   animation: glitch-flicker 0.3s ease-in-out;
 }
 
+.hover\:glitch-flicker:hover {
+  animation: glitch-flicker 0.3s ease-in-out;
+}
+
+@keyframes glitch-slice {
+  0% { clip-path: inset(10% 0 80% 0); transform: translateX(-5px); }
+  10% { clip-path: inset(50% 0 30% 0); transform: translateX(5px); }
+  20% { clip-path: inset(30% 0 50% 0); transform: translateX(-5px); }
+  30% { clip-path: inset(80% 0 10% 0); transform: translateX(5px); }
+  40% { clip-path: inset(20% 0 60% 0); transform: translateX(-5px); }
+  50% { clip-path: inset(60% 0 20% 0); transform: translateX(5px); }
+  60% { clip-path: inset(40% 0 40% 0); transform: translateX(-5px); }
+  70% { clip-path: inset(70% 0 20% 0); transform: translateX(5px); }
+  80% { clip-path: inset(10% 0 70% 0); transform: translateX(-5px); }
+  90% { clip-path: inset(90% 0 5% 0); transform: translateX(5px); }
+  100% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+}
+
+.animate-glitch-slice {
+  animation: glitch-slice 0.3s steps(2, end) forwards;
+}
+
+.group:hover .group-hover\:animate-glitch-slice {
+  animation: glitch-slice 0.3s steps(2, end) forwards;
+}
+
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -123,6 +149,15 @@ body {
 
 .animate-blink {
   animation: blink 1s infinite;
+}
+
+@keyframes scanline-sweep {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline-sweep {
+  animation: scanline-sweep 1.5s linear infinite;
 }
 
 .barcode-bg {

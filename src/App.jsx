@@ -3,10 +3,10 @@ import ScanlineOverlay from './components/ScanlineOverlay'
 import BootScreen from './components/BootScreen'
 import HeroSection from './components/HeroSection'
 import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Resume from './components/Resume'
-import Socials from './components/Socials'
+import ExperienceSection from './components/ExperienceSection'
+import ProjectsSection from './components/ProjectsSection'
+import ResumeSection from './components/ResumeSection'
+import SocialsSection from './components/SocialsSection'
 
 function App() {
   const [bootComplete, setBootComplete] = useState(false)
@@ -20,10 +20,10 @@ function App() {
         <>
           <HeroSection />
           <About />
-          <Experience />
-          <Projects />
-          <Resume />
-          <Socials />
+          <ExperienceSection />
+          <ProjectsSection />
+          <ResumeSection />
+          <SocialsSection />
         </>
       )}
     </div>
