@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ScanlineOverlay from './components/ScanlineOverlay'
 import BootScreen from './components/BootScreen'
-import Hero from './components/Hero'
+import HeroSection from './components/HeroSection'
 import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
@@ -18,7 +18,7 @@ function App() {
       
       {bootComplete && (
         <>
-          <Hero />
+          <HeroSection />
           <About />
           <Experience />
           <Projects />
