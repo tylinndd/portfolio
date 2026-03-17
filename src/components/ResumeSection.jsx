@@ -1,6 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Download } from 'lucide-react';
 
+const terminalLines = [
+  "> EXTRACTING RESUME DATA...",
+  "> NAME: TYLER LIN",
+  "> ROLE: FULL STACK DEVELOPER & AI ENGINEER",
+  "> SKILLS: REACT, NODE.JS, PYTHON, THREE.JS",
+  "> COMPILING DOSSIER..."
+];
+
 const ResumeSection = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -8,14 +16,6 @@ const ResumeSection = () => {
   const [showDossier, setShowDossier] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
-
-  const terminalLines = [
-    "> EXTRACTING RESUME DATA...",
-    "> NAME: TYLER LIN",
-    "> ROLE: FULL STACK DEVELOPER & AI ENGINEER",
-    "> SKILLS: REACT, NODE.JS, PYTHON, THREE.JS",
-    "> COMPILING DOSSIER..."
-  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,7 +71,7 @@ const ResumeSection = () => {
   return (
     <section id="resume" ref={sectionRef} className="min-h-screen py-20 px-4 md:px-8 flex flex-col items-center justify-center">
       <div className="max-w-4xl w-full">
-        <h2 className="font-press text-xl md:text-2xl text-green mb-12 uppercase">
+        <h2 className="font-press text-xl md:text-2xl text-green mb-12 uppercase terminal-prompt">
           {'>'} RETRIEVING RESUME.PDF...<span className="animate-blink inline-block ml-2">█</span>
         </h2>
         
@@ -85,7 +85,7 @@ const ResumeSection = () => {
 
           {/* Top Bar */}
           <div className="flex justify-between items-center border-b border-green pb-2 mb-4 px-4 pt-2 bg-[#0a1910]">
-            <div className="font-share text-green tracking-widest text-sm flex items-center">
+            <div className="font-share text-green tracking-widest text-sm flex items-center terminal-prompt">
               {'>'} RESUME_EXTRACT.EXE <span className="animate-blink ml-2">█</span>
             </div>
             <div className="flex gap-2">

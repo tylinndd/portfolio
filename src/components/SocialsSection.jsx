@@ -9,27 +9,36 @@ const socials = [
 
 const SocialCard = ({ social, isVisible, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [displayText, setDisplayText] = useState(social.name);
+  const [isConnecting, setIsConnecting] = useState(false);
   const { Icon } = social;
 
   useEffect(() => {
     let timeout;
-    if (isHovered) {
-      setDisplayText('CONNECTING...');
+    if (isConnecting) {
       timeout = setTimeout(() => {
-        setDisplayText(social.name);
-      }, 600); // Blinks/shows connecting for 600ms then resolves
-    } else {
-      setDisplayText(social.name);
+        setIsConnecting(false);
+      }, 600);
     }
     return () => clearTimeout(timeout);
-  }, [isHovered, social.name]);
+  }, [isConnecting]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setIsConnecting(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setIsConnecting(false);
+  };
+
+  const displayText = isConnecting ? 'CONNECTING...' : social.name;
 
   return (
     <a 
       href="#"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className={`group relative border border-green bg-black p-8 flex flex-col items-center justify-center transition-all duration-500 hover:border-cyan
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
       `}
@@ -45,7 +54,7 @@ const SocialCard = ({ social, isVisible, index }) => {
       </div>
       
       <div className="text-center font-share">
-        <h3 className={`text-green group-hover:text-cyan transition-colors duration-300 mb-2 font-bold tracking-widest ${isHovered && displayText === 'CONNECTING...' ? 'animate-blink' : ''}`}>
+        <h3 className={`font-vt text-2xl text-green group-hover:text-cyan transition-colors duration-300 mb-2 tracking-widest ${isHovered && displayText === 'CONNECTING...' ? 'animate-blink' : ''}`}>
           {displayText}
         </h3>
         <p className="text-green/60 text-xs tracking-wider group-hover:text-cyan/80 transition-colors duration-300">
@@ -92,7 +101,7 @@ const SocialsSection = () => {
 
           {/* Top Bar */}
           <div className="flex justify-between items-center border-b border-green pb-2 mb-8 px-4 pt-2 bg-[#0a1910]">
-            <div className="font-share text-green tracking-widest text-sm flex items-center">
+            <div className="font-share text-green tracking-widest text-sm flex items-center terminal-prompt">
               {'>'} COMMUNICATIONS.SYS <span className="animate-blink ml-2">█</span>
             </div>
             <div className="flex gap-2">
@@ -103,7 +112,7 @@ const SocialsSection = () => {
           </div>
 
           <div className="p-4 md:p-8">
-            <h2 className="font-press text-lg md:text-xl text-green mb-12 uppercase text-center">
+            <h2 className="font-press text-lg md:text-xl text-green mb-12 uppercase text-center terminal-prompt">
               {'>'} ESTABLISH CONNECTION...<span className="animate-blink inline-block ml-2">█</span>
             </h2>
 

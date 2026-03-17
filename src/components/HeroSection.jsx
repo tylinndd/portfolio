@@ -27,6 +27,7 @@ const HeroSection = () => {
   ], 80, 40, 1500);
 
   const [showNav, setShowNav] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (isFinished) {
@@ -47,14 +48,14 @@ const HeroSection = () => {
         </h1>
         
         {/* Typewriter text */}
-        <p className="font-share text-lg md:text-xl lg:text-2xl uppercase tracking-widest h-8 flex items-center justify-center mt-4">
+        <p className="font-share text-lg md:text-xl lg:text-2xl uppercase tracking-widest h-8 flex items-center justify-center mt-4 terminal-prompt">
           {text}
           <span className="animate-pulse ml-1 inline-block w-3 h-5 md:h-6 bg-green align-middle"></span>
         </p>
       </div>
 
-      {/* Nav Dock */}
-      <div className="absolute bottom-20 w-full flex justify-center z-20">
+      {/* Nav Dock (Desktop) */}
+      <div className="absolute bottom-20 w-full hidden md:flex justify-center z-20">
         <nav className="flex justify-center items-end space-x-4 md:space-x-8">
           {NAV_ITEMS.map((item, index) => {
             const Icon = item.icon;
@@ -85,6 +86,34 @@ const HeroSection = () => {
             );
           })}
         </nav>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className="absolute bottom-10 w-full flex md:hidden justify-center z-20" style={{ opacity: showNav ? 1 : 0, transition: 'opacity 0.5s ease-in' }}>
+        <div className="relative">
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="border border-green bg-black text-green px-6 py-3 font-press text-xs uppercase tracking-widest hover:bg-green hover:text-black transition-colors terminal-prompt"
+          >
+            {'>'} MENU.exe<span className="animate-blink ml-2">█</span>
+          </button>
+          
+          {mobileMenuOpen && (
+            <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 border border-green bg-black p-2 flex flex-col gap-2">
+              {NAV_ITEMS.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.id.toLowerCase()}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-green font-share text-sm p-2 hover:bg-green/20 hover:text-cyan transition-colors border border-transparent hover:border-green/50 flex items-center gap-3"
+                >
+                  <item.icon size={16} />
+                  {item.id}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

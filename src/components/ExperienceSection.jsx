@@ -43,6 +43,7 @@ const ExperienceItem = ({ exp }) => {
   const itemRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = itemRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -65,12 +66,12 @@ const ExperienceItem = ({ exp }) => {
       { threshold: 0.2 }
     );
 
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (itemRef.current) observer.unobserve(itemRef.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -100,7 +101,7 @@ const ExperienceItem = ({ exp }) => {
               key={i} 
               className="reveal-line opacity-0 translate-y-4 transition-all duration-500 ease-out flex items-start gap-3"
             >
-              <span className="text-green font-share mt-1">{'>'}</span>
+              <span className="text-green font-share mt-1 terminal-prompt">{'>'}</span>
               <p className="text-green font-share text-sm md:text-base leading-relaxed">
                 {line}
               </p>
@@ -142,7 +143,7 @@ export default function ExperienceSection() {
 
         {/* Terminal Header */}
         <div className="border-b border-green p-3 flex justify-between items-center bg-green/10">
-          <h2 className="text-green font-press text-xs md:text-sm tracking-widest flex items-center gap-2">
+          <h2 className="text-green font-press text-xs md:text-sm tracking-widest flex items-center gap-2 terminal-prompt">
             <span>{'>'} LOADING EXPERIENCE...</span>
             <span className="animate-blink">█</span>
           </h2>

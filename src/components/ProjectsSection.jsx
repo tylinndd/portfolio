@@ -69,13 +69,13 @@ const ProjectsSection = () => {
   return (
     <section id="projects" ref={sectionRef} className="min-h-screen py-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-press text-xl md:text-2xl text-green mb-12 uppercase">
+        <h2 className="font-press text-xl md:text-2xl text-green mb-12 uppercase terminal-prompt">
           {'>'} ACCESSING PROJECT FILES...<span className="animate-blink inline-block ml-2">█</span>
         </h2>
         
         <div className="border border-green bg-black p-1 mb-8">
           <div className="flex justify-between items-center border-b border-green pb-2 mb-4 px-2 pt-2">
-            <div className="font-share text-green tracking-widest text-sm">
+            <div className="font-share text-green tracking-widest text-sm terminal-prompt">
               {'>'} PROJECT_DB.DAT <span className="animate-blink">█</span>
             </div>
             <div className="flex gap-2">
@@ -121,14 +121,14 @@ const ProjectsSection = () => {
                   <div className="absolute top-2 right-2 z-20 border border-green bg-black px-2 py-1 text-[10px] text-green group-hover:border-cyan group-hover:text-cyan transition-colors uppercase">
                     STATUS: {project.status}
                   </div>
-                  <div className="absolute bottom-2 left-2 z-20 text-xs text-green bg-black/80 px-2 py-1 border border-green/50 group-hover:border-cyan/50 group-hover:text-cyan transition-colors">
+                  <div className="absolute bottom-2 left-2 z-20 text-xs text-green bg-black/80 px-2 py-1 border border-green/50 group-hover:border-cyan/50 group-hover:text-cyan transition-colors terminal-prompt">
                     {'>'} {project.filename}
                   </div>
                 </div>
                 
                 {/* Content Section */}
                 <div className="p-4 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-green mb-2 group-hover:text-cyan transition-colors uppercase tracking-wider">
+                  <h3 className="text-xl font-vt text-green mb-2 group-hover:text-cyan transition-colors uppercase tracking-wider">
                     {project.title}
                   </h3>
                   
