@@ -14,7 +14,7 @@ const Projects = () => {
           {'>'} EXECUTE PROJECTS.sh<span className="animate-pulse">█</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-share">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-vt">
           {projects.map(p => (
             <div key={p.id} className="group border border-green p-6 relative overflow-hidden bg-black hover:bg-green/5 transition-colors cursor-pointer">
               {/* Glitch hover effect overlay */}

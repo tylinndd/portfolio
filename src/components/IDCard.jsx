@@ -39,10 +39,10 @@ const IDCard = () => {
           <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(0,255,65,0.1)_50%,rgba(0,0,0,0.2)_50%)] bg-[length:100%_4px]"></div>
         </div>
         
-        {/* Verified stamp blinking on hover */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-4 border-red text-red font-press text-2xl p-3 rotate-[-15deg] opacity-0 group-hover:opacity-100 group-hover:animate-blink z-50 pointer-events-none bg-black/50 shadow-[0_0_15px_rgba(255,0,60,0.5)]">
+        {/* Verified stamp blinking on hover (Removed as requested) */}
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-4 border-red text-red font-press text-2xl p-3 rotate-[-15deg] opacity-0 group-hover:opacity-100 group-hover:animate-blink z-50 pointer-events-none bg-black/50 shadow-[0_0_15px_rgba(255,0,60,0.5)]">
           VERIFIED
-        </div>
+        </div> */}
       </div>
     </div>
   );

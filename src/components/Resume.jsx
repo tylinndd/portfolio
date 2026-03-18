@@ -8,7 +8,7 @@ const Resume = () => {
           {'>'} DOWNLOAD_RESUME.exe<span className="animate-pulse">█</span>
         </h2>
         
-        <div className="border border-green p-8 bg-black/50 font-share">
+        <div className="border border-green p-8 bg-black/50 font-vt">
           <div className="mb-6 text-cyan uppercase text-sm">
             <p>CONNECTING TO SECURE SERVER...</p>
             <p>AUTHENTICATING_USER_CREDENTIALS...</p>

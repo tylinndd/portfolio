@@ -15,7 +15,7 @@ const Socials = () => {
           {'>'} ESTABLISH_CONNECTION<span className="animate-pulse">█</span>
         </h2>
         
-        <div className="flex flex-wrap justify-center gap-8 font-share">
+        <div className="flex flex-wrap justify-center gap-8 font-vt">
           {links.map(link => (
             <a 
               key={link.name} 

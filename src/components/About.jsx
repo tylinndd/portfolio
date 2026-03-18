@@ -3,7 +3,7 @@ import IDCard from './IDCard';
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen py-20 px-4 md:px-8 flex justify-center items-center font-share">
+    <section id="about" className="min-h-screen py-20 px-4 md:px-8 flex justify-center items-center font-vt">
       <div className="w-full max-w-[1300px] border border-green bg-black relative shadow-[0_0_30px_rgba(0,255,65,0.05)]">
         {/* Window Header */}
         <div className="flex justify-between items-center border-b border-green px-4 py-2">

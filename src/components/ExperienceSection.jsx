@@ -83,13 +83,13 @@ const ExperienceItem = ({ exp }) => {
       <div className="flex flex-col gap-2">
         {/* Header Line */}
         <div className="reveal-line opacity-0 translate-y-4 transition-all duration-500 ease-out flex flex-wrap items-baseline gap-3">
-          <span className="text-cyan font-share text-sm tracking-wider">
+          <span className="text-cyan font-vt text-sm tracking-wider">
             [INFO] [{exp.date}]
           </span>
           <h3 className="text-green font-press text-lg md:text-xl uppercase tracking-widest">
             {exp.role}
           </h3>
-          <span className="text-red font-share text-sm tracking-widest">
+          <span className="text-red font-vt text-sm tracking-widest">
             {exp.company}
           </span>
         </div>
@@ -101,8 +101,8 @@ const ExperienceItem = ({ exp }) => {
               key={i} 
               className="reveal-line opacity-0 translate-y-4 transition-all duration-500 ease-out flex items-start gap-3"
             >
-              <span className="text-green font-share mt-1 terminal-prompt">{'>'}</span>
-              <p className="text-green font-share text-sm md:text-base leading-relaxed">
+              <span className="text-green font-vt mt-1 terminal-prompt">{'>'}</span>
+              <p className="text-green font-vt text-sm md:text-base leading-relaxed">
                 {line}
               </p>
             </div>
@@ -110,7 +110,7 @@ const ExperienceItem = ({ exp }) => {
         </div>
 
         {/* Footer Log Line */}
-        <div className="reveal-line opacity-0 translate-y-4 transition-all duration-500 ease-out mt-6 text-green/50 font-share text-xs tracking-widest uppercase">
+        <div className="reveal-line opacity-0 translate-y-4 transition-all duration-500 ease-out mt-6 text-green/50 font-vt text-xs tracking-widest uppercase">
           SYS.LOG // HASH: {exp.hash} // INTEGRITY: VERIFIED // OK
         </div>
       </div>
@@ -126,7 +126,7 @@ export default function ExperienceSection() {
         
         {/* Faint Background Text/Grid overlay */}
         <div className="absolute inset-0 pointer-events-none opacity-[0.03] flex items-center justify-center overflow-hidden">
-          <pre className="text-green text-[0.5rem] leading-none select-none font-share">
+          <pre className="text-green text-[0.5rem] leading-none select-none font-vt">
             {`KEYBOARD CONTROL          SELECTION          MASTER TUNING
             
             

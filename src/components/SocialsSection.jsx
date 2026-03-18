@@ -53,7 +53,7 @@ const SocialCard = ({ social, isVisible, index }) => {
         <Icon size={48} strokeWidth={1.5} />
       </div>
       
-      <div className="text-center font-share">
+      <div className="text-center font-vt">
         <h3 className={`font-vt text-2xl text-green group-hover:text-cyan transition-colors duration-300 mb-2 tracking-widest ${isHovered && displayText === 'CONNECTING...' ? 'animate-blink' : ''}`}>
           {displayText}
         </h3>
@@ -89,7 +89,7 @@ const SocialsSection = () => {
 
   return (
     <section id="socials" ref={sectionRef} className="min-h-screen py-20 px-4 md:px-8 flex flex-col">
-      <div className="max-w-5xl w-full mx-auto flex-grow flex flex-col justify-center">
+      <div className="w-full max-w-[1300px] mx-auto flex-grow flex flex-col justify-center">
         
         {/* Terminal Window */}
         <div className="relative border border-green bg-black p-1 mb-20">
@@ -101,7 +101,7 @@ const SocialsSection = () => {
 
           {/* Top Bar */}
           <div className="flex justify-between items-center border-b border-green pb-2 mb-8 px-4 pt-2 bg-[#0a1910]">
-            <div className="font-share text-green tracking-widest text-sm flex items-center terminal-prompt">
+            <div className="font-vt text-green tracking-widest text-sm flex items-center terminal-prompt">
               {'>'} COMMUNICATIONS.SYS <span className="animate-blink ml-2">█</span>
             </div>
             <div className="flex gap-2">
@@ -132,7 +132,7 @@ const SocialsSection = () => {
       </div>
 
       {/* Footer */}
-      <footer className="text-center font-share text-green/60 py-8">
+      <footer className="text-center font-vt text-green/60 py-8">
         <p className="tracking-widest text-sm md:text-base">
           © 2025 TY — ALL RIGHTS RESERVED<span className="animate-blink inline-block ml-1">█</span>
         </p>

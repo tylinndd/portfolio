@@ -8,7 +8,7 @@ const Experience = () => {
           {'>'} LOADING EXPERIENCE...<span className="animate-pulse">█</span>
         </h2>
         
-        <div className="space-y-8 font-share">
+        <div className="space-y-8 font-vt">
           <div className="border-l-2 border-green pl-6 relative">
             <div className="absolute w-3 h-3 bg-green -left-[7px] top-1"></div>
             <div className="text-cyan text-sm mb-1">2024 - PRESENT</div>

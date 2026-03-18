@@ -68,14 +68,14 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" ref={sectionRef} className="min-h-screen py-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full max-w-[1300px] mx-auto">
         <h2 className="font-press text-xl md:text-2xl text-green mb-12 uppercase terminal-prompt">
           {'>'} ACCESSING PROJECT FILES...<span className="animate-blink inline-block ml-2">█</span>
         </h2>
         
         <div className="border border-green bg-black p-1 mb-8">
           <div className="flex justify-between items-center border-b border-green pb-2 mb-4 px-2 pt-2">
-            <div className="font-share text-green tracking-widest text-sm terminal-prompt">
+            <div className="font-vt text-green tracking-widest text-sm terminal-prompt">
               {'>'} PROJECT_DB.DAT <span className="animate-blink">█</span>
             </div>
             <div className="flex gap-2">
@@ -85,7 +85,7 @@ const ProjectsSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-2 font-share">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-2 font-vt">
             {projects.map((project, index) => (
               <div 
                 key={project.id} 
