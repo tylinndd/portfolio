@@ -3,37 +3,35 @@ import React, { useEffect, useRef } from 'react';
 const experiences = [
   {
     id: 1,
-    date: '2024-PRESENT',
-    role: 'LEAD AI ENGINEER',
-    company: '@TYRELL CORP',
+    date: 'May. 2026 - Jul. 2026',
+    role: 'REU Research Intern',
+    company: '@UT Dallas',
     description: [
-      'Architected generative neural networks for synthetic intelligence.',
-      'Optimized query response times by 40% using advanced edge-caching.',
-      'Led a strike team of 5 developers on Project NEXUS.'
+      'Research the application of software dependability techniques in software development and testing.',
     ],
     hash: 'XEZH6LPTVE'
   },
   {
     id: 2,
-    date: '2022-2024',
-    role: 'FULL STACK DEVELOPER',
-    company: '@OMNICORP',
+    date: 'Jan. 2026 - May. 2026',
+    role: 'Undergraduate Researcher',
+    company: '@Kennesaw State University',
     description: [
-      'Built resilient, scalable web interfaces for automated defense systems.',
-      'Integrated secure authentication protocols blocking 99.9% of attacks.',
-      'Refactored legacy monolithic backend into decoupled microservices.'
+      'Trained and evaluated ML models — classifiers, neural nets, LSTMs, and TF-IDF — analyzing precision, recall, and cross-validation to support research.',
+      'Implemented attention mechanisms, transformer blocks, and fine-tuned BERT for downstream NLP tasks.',
+      'Built lightweight RAG pipelines integrating retrieval, chunking, and hallucination analysis to isolate retrieval vs. generation errors.'
     ],
     hash: 'DYEVJD24QED'
   },
   {
     id: 3,
-    date: '2020-2022',
-    role: 'JUNIOR NETRUNNER',
-    company: '@FREELANCE',
+    date: 'Aug. 2025 - Present',
+    role: 'Programming Tutor',
+    company: '@Kennesaw State University',
     description: [
-      'Exploited vulnerabilities in corporate networks for bounty programs.',
-      'Developed custom terminal applications using raw WebSockets.',
-      'Maintained a 100% success rate in data retrieval operations.'
+      'Exploited vulnerabilities in corporateMentor 300+ students in Java and Python through targeted debugging and concept reinforcement. networks for bounty programs.',
+      'Break down complex programming concepts step-by-step, achieving a 99% comprehension rate across all learners.',
+      'Resolve 20+ critical bugs weekly, enabling 25+ students to complete assignments on time.'
     ],
     hash: 'VBRSLP99XX'
   }

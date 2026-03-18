@@ -101,7 +101,7 @@ const ResumeSection = () => {
                 <div className="absolute bottom-0 right-0 w-2 h-2 bg-green translate-x-1/2 translate-y-1/2"></div>
 
                 <div className="text-center mb-4">
-                  <h3 className="font-press text-2xl md:text-3xl text-green mb-2 tracking-widest">DOSSIER</h3>
+                  <h3 className="font-press text-2xl md:text-3xl text-green mb-2 tracking-widest">RESUME</h3>
                   <p className="text-cyan text-xs md:text-sm tracking-[0.2em]">SECURITY CLEARANCE: LEVEL 9 REQUIRED</p>
                 </div>
 

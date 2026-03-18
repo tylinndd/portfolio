@@ -24,9 +24,9 @@ const About = () => {
           <div className="flex-1 text-[13px] leading-relaxed text-green">
             <div className="space-y-6">
               <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>UPLOADING BIO_DATA...</span></p>
-              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>NAME: CYBER_DECKARD</span></p>
-              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>DESIGNATION: FULL STACK ENGINEER / AI SPECIALIST</span></p>
-              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>LOCATION: SECTOR 4, NEO-TOKYO</span></p>
+              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>NAME: TYLIN DELANEY</span></p>
+              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>DESIGNATION: Programming Tutor / ML Researcher / REU Research Intern</span></p>
+              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>LOCATION: Marietta, GA</span></p>
               <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>STATUS: ONLINE AND SEARCHING FOR ANOMALIES...</span></p>
             </div>
             
@@ -34,9 +34,10 @@ const About = () => {
               <p className="flex gap-2">
                 <span className="terminal-prompt">{'>'}</span> 
                 <span className="leading-[2]">
-                  I specialize in building high-performance, resilient web applications that survive the harshest<br className="hidden lg:block"/>
-                  network conditions. My focus is on creating immersive user interfaces blending with powerful backend<br className="hidden lg:block"/>
-                  systems.
+                I'm passionate about learning how software systems are designed and built from the ground up.
+                <br className="hidden lg:block"/>
+                My focus is in data engineering, cloud computing, and machine learning — and how they
+                come together to power real-world applications at scale.
                 </span>
               </p>
               
@@ -55,12 +56,12 @@ const About = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-8">
                 {[
-                  { name: 'React / Next.js', width: '90%' },
+                  { name: 'Python', width: '97%' },
+                  { name: 'Java', width: '89%' },
                   { name: 'TypeScript', width: '85%' },
-                  { name: 'Python / AI', width: '75%' },
-                  { name: 'Node.js', width: '80%' },
-                  { name: 'Tailwind CSS', width: '95%' },
-                  { name: 'Cyber Security', width: '70%' },
+                  { name: 'SQL', width: '88%' },
+                  { name: 'C++', width: '80%' },
+                  { name: 'Shell', width: '70%' },
                 ].map(skill => (
                   <div key={skill.name} className="space-y-3">
                     <div className="text-[12px]">{skill.name}</div>

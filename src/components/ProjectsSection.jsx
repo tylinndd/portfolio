@@ -4,37 +4,37 @@ const projects = [
   {
     id: 1,
     filename: 'StepSafe.exe',
-    title: 'PROJECT: STEPSAFE',
-    desc: 'A decentralized end-to-end encrypted messaging network designed to bypass mass surveillance protocols.',
+    title: 'STEPSAFE',
+    desc: 'Backend for ML powered diabetic foot ulcer detection system (1st Place @ 2026 HACKATHON)',
     status: 'ACTIVE',
-    tech: ['REACT', 'WEB3', 'TAILWIND', 'RUST'],
+    tech: ['Python', 'Shell'],
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 2,
-    filename: 'NeuralNet.exe',
-    title: 'NEURAL.NET VISUALIZER',
-    desc: 'Real-time 3D visualization of deep learning nodes processing unstructured data sets.',
-    status: 'DEPLOYED',
-    tech: ['THREE.JS', 'PYTHON', 'WEBGL'],
+    filename: 'Hexbear.exe',
+    title: 'HEXBEAR',
+    desc: 'A gamified climate-action mobile app that turns everyday sustainable habits into a magical wizard adventure.',
+    status: 'SHIPPED',
+    tech: ['TypeScript', 'JavaScript','SQL'],
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 3,
-    filename: 'GhostProtocol.exe',
-    title: 'GHOST PROTOCOL',
-    desc: 'Automated penetration testing framework with self-mutating payloads and stealth execution.',
-    status: 'IN PROGRESS',
-    tech: ['GO', 'BASH', 'DOCKER'],
+    filename: 'FilmFanatic.exe',
+    title: 'FilmFanatic',
+    desc: 'ML-based movie recommendation system that suggests movies based on a movies genres, cast, description, and director.',
+    status: 'DEPLOYED',
+    tech: ['Python', 'Shell', 'SQL', 'HTML/CSS','JavaScript'],
     image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 4,
-    filename: 'ZeroDay.exe',
-    title: 'ZERO DAY EXPLOIT',
-    desc: 'Vulnerability scanner and exploit database interface for ethical hacking operations.',
+    filename: 'Horizon.exe',
+    title: 'HORIZON',
+    desc: 'A production-ready AI-powered platform for detecting disease outbreaks, assessing health risks, and optimizing hospital resource allocation in real-time.',
     status: 'ARCHIVED',
-    tech: ['NODE.JS', 'VUE', 'MONGODB'],
+    tech: ['Python', 'TypeScript', 'Shell', 'SQL'],
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800'
   }
 ];
