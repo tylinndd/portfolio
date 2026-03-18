@@ -29,7 +29,7 @@ const experiences = [
     role: 'Programming Tutor',
     company: '@Kennesaw State University',
     description: [
-      'Exploited vulnerabilities in corporateMentor 300+ students in Java and Python through targeted debugging and concept reinforcement. networks for bounty programs.',
+      'Mentor 300+ students in Java and Python through targeted debugging and concept reinforcement. networks for bounty programs.',
       'Break down complex programming concepts step-by-step, achieving a 99% comprehension rate across all learners.',
       'Resolve 20+ critical bugs weekly, enabling 25+ students to complete assignments on time.'
     ],

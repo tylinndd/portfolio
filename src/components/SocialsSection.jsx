@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const socials = [
-  { id: 1, name: 'GITHUB', handle: '@cyber_deckard', Icon: Github },
-  { id: 2, name: 'LINKEDIN', handle: '/in/deckard_sys', Icon: Linkedin },
-  { id: 3, name: 'SECURE_COMMS', handle: 'deckard@tyrell.corp', Icon: Mail },
+  { id: 1, name: 'GITHUB', handle: '@tylinndd', Icon: Github, url: 'https://github.com/tylinndd' }, // TODO: Add your GitHub URL
+  { id: 2, name: 'LINKEDIN', handle: '/in/tylin-delaney', Icon: Linkedin, url: 'https://www.linkedin.com/in/tylin-delaney/' }, // TODO: Add your LinkedIn URL
+  { id: 3, name: 'SECURE_COMMS', handle: 'tylinjd1@gmail.com', Icon: Mail, url: 'mailto:tylinjd1@gmail.com' }, // TODO: Add your email
 ];
 
 const SocialCard = ({ social, isVisible, index }) => {
@@ -36,7 +36,9 @@ const SocialCard = ({ social, isVisible, index }) => {
 
   return (
     <a 
-      href="#"
+      href={social.url}
+      target={social.name === 'SECURE_COMMS' ? '_self' : '_blank'}
+      rel="noopener noreferrer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={`group relative border border-green bg-black p-8 flex flex-col items-center justify-center transition-all duration-500 hover:border-cyan

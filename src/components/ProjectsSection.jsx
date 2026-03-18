@@ -8,7 +8,9 @@ const projects = [
     desc: 'Backend for ML powered diabetic foot ulcer detection system (1st Place @ 2026 HACKATHON)',
     status: 'ACTIVE',
     tech: ['Python', 'Shell'],
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800',
+    //projectUrl: '#', // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/StephenSook/StepSafe'   // TODO: Add your GitHub repository URL here
   },
   {
     id: 2,
@@ -17,7 +19,9 @@ const projects = [
     desc: 'A gamified climate-action mobile app that turns everyday sustainable habits into a magical wizard adventure.',
     status: 'SHIPPED',
     tech: ['TypeScript', 'JavaScript','SQL'],
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
+    projectUrl: 'https://youtu.be/zNZLKQuChu8', // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/tylinndd/hexbear'   // TODO: Add your GitHub repository URL here
   },
   {
     id: 3,
@@ -26,7 +30,9 @@ const projects = [
     desc: 'ML-based movie recommendation system that suggests movies based on a movies genres, cast, description, and director.',
     status: 'DEPLOYED',
     tech: ['Python', 'Shell', 'SQL', 'HTML/CSS','JavaScript'],
-    image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?auto=format&fit=crop&q=80&w=800',
+    projectUrl: 'https://filmfanatic.onrender.com/', // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/tylinndd/movie-recommendation'   // TODO: Add your GitHub repository URL here
   },
   {
     id: 4,
@@ -35,7 +41,9 @@ const projects = [
     desc: 'A production-ready AI-powered platform for detecting disease outbreaks, assessing health risks, and optimizing hospital resource allocation in real-time.',
     status: 'ARCHIVED',
     tech: ['Python', 'TypeScript', 'Shell', 'SQL'],
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800',
+    //projectUrl: '#', // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/tylinndd/horizon'   // TODO: Add your GitHub repository URL here
   }
 ];
 
@@ -145,12 +153,22 @@ const ProjectsSection = () => {
                   </div>
                   
                   <div className="flex gap-4 mt-auto">
-                    <button className="flex-1 border border-green text-green py-2 text-sm hover:bg-green hover:text-black transition-colors uppercase tracking-widest group-hover:border-cyan group-hover:hover:bg-cyan">
+                    <a 
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 border border-green text-green py-2 text-sm hover:bg-green hover:text-black transition-colors uppercase tracking-widest group-hover:border-cyan group-hover:hover:bg-cyan text-center"
+                    >
                       [ VIEW PROJECT ]
-                    </button>
-                    <button className="flex-1 border border-green text-green py-2 text-sm hover:bg-green hover:text-black transition-colors uppercase tracking-widest group-hover:border-cyan group-hover:hover:bg-cyan">
+                    </a>
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 border border-green text-green py-2 text-sm hover:bg-green hover:text-black transition-colors uppercase tracking-widest group-hover:border-cyan group-hover:hover:bg-cyan text-center"
+                    >
                       [ SOURCE CODE ]
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

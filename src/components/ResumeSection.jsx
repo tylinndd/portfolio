@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Download } from 'lucide-react';
+import resumePdf from '../assets/TylinDelaneyResume.pdf';
 
 const ResumeSection = () => {
   const sectionRef = useRef(null);
@@ -53,7 +54,14 @@ const ResumeSection = () => {
           setTimeout(() => {
             setIsDownloading(false);
             setDownloadProgress(0);
-            // Trigger actual download here if needed
+            
+            // Trigger actual download
+            const link = document.createElement('a');
+            link.href = resumePdf;
+            link.download = 'TylinDelaneyResume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
           }, 500);
           return 100;
         }
@@ -127,6 +135,7 @@ const ResumeSection = () => {
                 >
                   <div className="relative z-10 flex items-center justify-center gap-3">
                     <Download size={20} />
+                    {/* TODO: Add actual download logic in handleDownload function above */}
                     {isDownloading ? `DOWNLOADING... ${downloadProgress}%` : '[ DOWNLOAD RESUME.PDF ]'}
                   </div>
                   
@@ -201,10 +210,17 @@ const ResumeSection = () => {
                 <div className="w-full h-2 bg-green/30 animate-scanline-sweep absolute top-0 left-0 blur-[1px]"></div>
               </div>
               
-              <div className="w-full min-h-full bg-white/90 p-4 relative z-10">
-                <div className="w-full h-[800px] border-2 border-dashed border-gray-400 flex items-center justify-center text-gray-500 font-sans">
-                  [ RESUME IMAGE GOES HERE ]
-                </div>
+              <div className="w-full min-h-full bg-white/90 relative z-10 flex flex-col items-center justify-center">
+                <object 
+                  data={resumePdf} 
+                  type="application/pdf" 
+                  className="w-full h-[80vh] md:h-[800px]"
+                >
+                  <p className="text-black p-4">
+                    Your browser does not support PDFs. 
+                    <a href={resumePdf} className="text-blue-600 underline ml-1">Download the PDF</a>.
+                  </p>
+                </object>
               </div>
             </div>
           </div>
