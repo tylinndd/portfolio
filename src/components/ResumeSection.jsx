@@ -116,7 +116,7 @@ const ResumeSection = () => {
                 <div className="space-y-3 mb-4 text-sm md:text-base flex-grow flex flex-col justify-center">
                   <div className="border-t border-dashed border-green/30 pt-4 flex justify-between">
                     <span className="text-green/70">FILE_SIZE:</span>
-                    <span className="text-green">2.4 MB</span>
+                    <span className="text-green">157 KB</span>
                   </div>
                   <div className="border-t border-dashed border-green/30 pt-4 flex justify-between">
                     <span className="text-green/70">FORMAT:</span>
@@ -124,7 +124,7 @@ const ResumeSection = () => {
                   </div>
                   <div className="border-t border-dashed border-green/30 pt-4 flex justify-between">
                     <span className="text-green/70">LAST_UPDATED:</span>
-                    <span className="text-green">2026-03-17</span>
+                    <span className="text-green">2026-05-13</span>
                   </div>
                   <div className="border-t border-dashed border-green/30"></div>
                 </div>
@@ -135,7 +135,6 @@ const ResumeSection = () => {
                 >
                   <div className="relative z-10 flex items-center justify-center gap-3">
                     <Download size={20} />
-                    {/* TODO: Add actual download logic in handleDownload function above */}
                     {isDownloading ? `DOWNLOADING... ${downloadProgress}%` : '[ DOWNLOAD RESUME.PDF ]'}
                   </div>
                   
@@ -166,18 +165,19 @@ const ResumeSection = () => {
                   <span className="text-green/50 text-xs animate-pulse">LIVE</span>
                 </div>
                 
-                <div className="flex-grow flex items-center justify-center border border-dashed border-green/30 bg-green/5 relative overflow-hidden">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 border border-green/50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-cyan group-hover:text-cyan transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
-                    </div>
-                    <button 
-                      onClick={() => setIsPreviewMode(true)}
-                      className="border border-green text-green px-6 py-2 text-sm hover:bg-green hover:text-black transition-colors uppercase tracking-widest"
-                    >
-                      [ INITIALIZE PREVIEW ]
-                    </button>
-                  </div>
+                <div className="flex-grow border border-dashed border-green/30 bg-green/5 relative overflow-hidden">
+                  <iframe
+                    src={`${resumePdf}#toolbar=0&navpanes=0&scrollbar=0`}
+                    title="Tylin Delaney resume preview"
+                    className="w-full h-full border-0 bg-white"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setIsPreviewMode(true)}
+                    className="absolute bottom-3 right-3 border border-green bg-black/90 text-green px-4 py-2 text-xs uppercase tracking-widest hover:bg-green hover:text-black transition-colors"
+                  >
+                    [ FULLSCREEN ]
+                  </button>
                 </div>
               </div>
             </div>

@@ -1,19 +1,41 @@
 import React, { useEffect, useRef } from 'react';
 
 const experiences = [
+  
   {
     id: 1,
-    date: 'May. 2026 - Jul. 2026',
-    role: 'REU Research Intern',
-    company: '@UT Dallas',
+    date: 'Jun. 2026 - Aug. 2026',
+    role: 'Software Engineer Intern',
+    company: '@Fiserv',
     description: [
-      'Research the application of software dependability techniques in software development and testing.',
+      
     ],
     hash: 'XEZH6LPTVE'
   },
   {
     id: 2,
-    date: 'Jan. 2026 - May. 2026',
+    date: 'Apr. 2026',
+    role: 'Data Engineer',
+    company: '@JPMorganChase Data for Good',
+    description: [
+      'Selected from 1,000+ applicants to represent KSU at JPMorganChase Data for Good Hackathon, building data-driven solutions for a nonprofit organization',
+      'Accelerated affordable housing acquisition workflows for a Fort Worth housing nonprofit by building a natural language (NLP) query interface that cut lot evaluation time by 95%, enabling boards to assess 20-40 properties per cycle without manual dataset research.',
+    ],
+    hash: 'EFH132nHE'
+  },
+  {
+    id: 3,
+    date: 'Apr. 2026 - Present',
+    role: 'Software Engineer Intern',
+    company: '@XR DOJO',
+    description: [
+      'Building backend features for ATL Quest using Next.js and related web technologies.',
+    ],
+    hash: 'BF58WS4SFd'
+  },
+  {
+    id: 4,
+    date: 'Jan. 2026 - Apr. 2026',
     role: 'Undergraduate Researcher',
     company: '@Kennesaw State University',
     description: [
@@ -24,12 +46,12 @@ const experiences = [
     hash: 'DYEVJD24QED'
   },
   {
-    id: 3,
-    date: 'Aug. 2025 - Present',
+    id: 5,
+    date: 'Aug. 2025 - Apr. 2026',
     role: 'Programming Tutor',
     company: '@Kennesaw State University',
     description: [
-      'Mentor 300+ students in Java and Python through targeted debugging and concept reinforcement. networks for bounty programs.',
+      'Mentor 300+ students in Java and Python through targeted debugging and concept reinforcement.',
       'Break down complex programming concepts step-by-step, achieving a 99% comprehension rate across all learners.',
       'Resolve 20+ critical bugs weekly, enabling 25+ students to complete assignments on time.'
     ],

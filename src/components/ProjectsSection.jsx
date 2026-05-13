@@ -3,6 +3,29 @@ import React, { useEffect, useRef, useState } from 'react';
 const projects = [
   {
     id: 1,
+    filename: 'Nest.exe',
+    title: 'NEST',
+    desc: 'An AI-powered transition navigator for Georgia foster youth aging out of care.',
+    status: 'DEPLOYED',
+    tech: ['TypeScript'],
+    image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?auto=format&fit=crop&q=80&w=800',
+    projectUrl: 'https://nest-zeta-nine.vercel.app',
+    // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/tylinndd/nest'   // TODO: Add your GitHub repository URL here
+  },
+  {
+    id: 2,
+    filename: 'Shell.exe',
+    title: 'CUSTOM UNIX SHELL',
+    desc: 'A Unix shell built from scratch in C for CS 3502: Operating Systems. Implements core shell functionality including process creation, file descriptor manipulation, and signal handling.',
+    status: 'TESTED',
+    tech: ['C, Shell'],
+    image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?auto=format&fit=crop&q=80&w=800',
+    // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/tylinndd/osclass'   // TODO: Add your GitHub repository URL here
+  },
+  {
+    id: 3,
     filename: 'StepSafe.exe',
     title: 'STEPSAFE',
     desc: 'Backend for ML powered diabetic foot ulcer detection system (1st Place @ 2026 HACKATHON)',
@@ -13,7 +36,7 @@ const projects = [
     githubUrl: 'https://github.com/StephenSook/StepSafe'   // TODO: Add your GitHub repository URL here
   },
   {
-    id: 2,
+    id: 4,
     filename: 'Hexbear.exe',
     title: 'HEXBEAR',
     desc: 'A gamified climate-action mobile app that turns everyday sustainable habits into a magical wizard adventure.',
@@ -24,7 +47,7 @@ const projects = [
     githubUrl: 'https://github.com/tylinndd/hexbear'   // TODO: Add your GitHub repository URL here
   },
   {
-    id: 3,
+    id: 5,
     filename: 'FilmFanatic.exe',
     title: 'FilmFanatic',
     desc: 'ML-based movie recommendation system that suggests movies based on a movies genres, cast, description, and director.',
@@ -44,7 +67,18 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800',
     //projectUrl: '#', // TODO: Add your live project URL here
     githubUrl: 'https://github.com/tylinndd/horizon'   // TODO: Add your GitHub repository URL here
-  }
+  },
+  {
+    id: 6,
+    filename: 'Saber.exe',
+    title: 'SABER',
+    desc: 'AI-powered diagnostics that separate language barriers from knowledge gaps for English Language Learners.',
+    status: 'DEPLOYED',
+    tech: ['TypeScript'],
+    image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?auto=format&fit=crop&q=80&w=800',
+    // TODO: Add your live project URL here
+    githubUrl: 'https://github.com/StephenSook/Saber'   // TODO: Add your GitHub repository URL here
+  },
 ];
 
 const ProjectsSection = () => {
