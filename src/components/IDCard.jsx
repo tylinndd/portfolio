@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImg from '../assets/tdelane1@students.kennesaw.edu-e244cae4.jpg';
+import profileImg from '../assets/bwheadshot.JPG';
 
 const IDCard = () => {
   return (

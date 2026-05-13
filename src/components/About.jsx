@@ -25,9 +25,9 @@ const About = () => {
             <div className="space-y-6">
               <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>UPLOADING BIO_DATA...</span></p>
               <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>NAME: TYLIN DELANEY</span></p>
-              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>DESIGNATION: Programming Tutor / ML Researcher / REU Research Intern</span></p>
+              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>DESIGNATION: Software Engineer Intern / Data Engineer / Programming Tutor / ML Researcher</span></p>
               <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>LOCATION: Marietta, GA</span></p>
-              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>STATUS: Computer Science and Math @ Kennesaw State University</span></p>
+              <p className="flex gap-2"><span className="terminal-prompt">{'>'}</span> <span>STATUS: Computer Science and Math @ UGA</span></p>
             </div>
             
             <div className="mt-8 space-y-6">
