@@ -32,7 +32,7 @@ const projects = [
     status: 'ACTIVE',
     tech: ['Python', 'Shell'],
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800',
-    //projectUrl: '#', // TODO: Add your live project URL here
+    projectUrl: 'https://youtu.be/6elBuetrcIY', // TODO: Add your live project URL here
     githubUrl: 'https://github.com/StephenSook/StepSafe'   // TODO: Add your GitHub repository URL here
   },
   {
